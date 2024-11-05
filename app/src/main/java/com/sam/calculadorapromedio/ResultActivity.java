@@ -12,17 +12,17 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        // Obtener el TextView para mostrar el promedio
+
         @SuppressLint("MissingInflatedId")
         TextView tvPromedio = findViewById(R.id.tvPromedio);
 
-        // Obtener datos del Intent
+
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             String nombre = extras.getString("nombre");
             double promedio = extras.getDouble("promedio");
 
-            // Configurar el texto del TextView
+
             tvPromedio.setText(nombre + ", tu promedio es: " + promedio);
         }
     }
